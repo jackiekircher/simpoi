@@ -66,9 +66,9 @@ QSize SimpoiWidget::sizeHint() const
  * a unique signal that also sends the poi id, but I'll look into that
  * later */
 void SimpoiWidget::poi1_speed_change(int value) { poi[0].speed = value; }
-void SimpoiWidget::poi1_angle_change(int value) { poi[0].angle = value; }
+void SimpoiWidget::poi1_angle_change(int value) { poi[0].angle = value*PI/180; }
 void SimpoiWidget::path1_speed_change(int value) { poi[0].path.speed = value; }
-void SimpoiWidget::path1_angle_change(int value) { poi[0].path.angle = value; }
+void SimpoiWidget::path1_angle_change(int value) { poi[0].path.angle = value*PI/180; }
 void SimpoiWidget::poi1_clockwise() { poi[0].direction = 1; }
 void SimpoiWidget::poi1_cc() { poi[0].direction = -1; }
 void SimpoiWidget::path1_clockwise() { poi[0].path.direction = 1; }
@@ -76,7 +76,7 @@ void SimpoiWidget::path1_cc() { poi[0].path.direction = -1; }
 void SimpoiWidget::path1_height_changed(const QString &str) { poi[0].path.height = str.toDouble(); }
 void SimpoiWidget::path1_width_changed(const QString &str) { poi[0].path.width = str.toDouble(); }
 void SimpoiWidget::path1_centerx_changed(const QString &str) { poi[0].path.center.x = str.toDouble(); }
-void SimpoiWidget::path1_centery_changed(const QString &str) { poi[0].path.center.x = str.toDouble(); }
+void SimpoiWidget::path1_centery_changed(const QString &str) { poi[0].path.center.y = str.toDouble(); }
 
 
 void SimpoiWidget::initializeGL() {

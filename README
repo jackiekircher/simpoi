@@ -1,0 +1,16 @@
+SimPoi
+
+A simple poi simulator written in C/C++ using OpenGL and Qt that aims to help visualize and create new patterns with poi.  This project is VERY young at the moment.  Currently controls only work for the blue poi, the pink will be controllable once I get the interface down pat.  Reset buttons are not working yet, their functionality is TBD.
+
+Only circular/elliptical paths are currently supported.  The graphics are also very basic.
+
+TODO:
+- user interface for interactive changes (still working on it)
+- implement readable patterns
+- pretty up animation
+- add optional trails
+- more complex paths
+  1. pendulums?
+  2. stalls?
+  3. weaves?
+- 3D?
